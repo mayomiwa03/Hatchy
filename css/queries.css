@@ -1,0 +1,86 @@
+@media (max-width: 1050px) {
+  .header {
+    padding: 2rem 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+
+  #splash-screen h1 {
+    font-size: 3rem;
+  }
+
+  #splash-screen p {
+    font-size: 1.8rem;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    padding: 1rem;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    width: 100vw;
+    gap: 3rem;
+
+    padding-top: 10rem;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
+  }
+  .first-view {
+    background-image: linear-gradient(
+        rgba(34, 34, 34, 0.603),
+        rgba(34, 34, 34, 0.719)
+      ),
+      url("../images/mobile-b-img.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+  }
+  .header {
+    padding: 1rem 1.5rem;
+    padding-right: 8rem;
+  }
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 16px;
+    /* padding-right: 1.5rem; */
+    z-index: 998;
+    overflow: hidden;
+    position: absolute;
+    right: 2rem;
+  }
+
+  .hamburger span {
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+    transition: all 0.05 ease;
+  }
+  .nav-menu a {
+    color: #000;
+    font-weight: 600;
+  }
+  .left-header {
+    gap: 1rem;
+  }
+  .sign-up:link,
+  .sign-up:visited,
+  .log-in:link,
+  .log-in:visited {
+    font-size: 2rem;
+  }
+  .nav-menu li {
+    font-size: 1.8rem;
+    max-width: 20rem;
+  }
+}
