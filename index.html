@@ -13,6 +13,16 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
 
     <link rel="icon" href="imgs/fav-icon.png" />
   </head>
@@ -42,45 +52,87 @@
           <a href="#" class="sign-up">Contact Us</a>
         </div>
       </header>
-      <div class="hero">
-        <h1 class="h-head" id="animatedText"></h1>
-        <p class="h-body">
-          Experience the ultimate in skincare with our luxury essentials.
-          Discover products that enhance your natural beauty and provide
-          unparalleled care
-        </p>
-        <a href="#">Shop Now</a>
-      </div>
+    </div>
+    <div class="hero">
+      <h1 class="h-head" id="animatedText"></h1>
+      <p class="h-body">
+        Experience the ultimate in skincare with our luxury essentials. Discover
+        products that enhance your natural beauty and provide unparalleled care
+      </p>
+      <a class="h-link" href="#">Shop Now</a>
     </div>
     <div class="services">
-      <div class="carousel">
-        <div class="carousel-track">
-          <div
-            class="carousel-slide"
-            style="background-image: url('../images/mobile-b-img.jpg')"
-          >
-            <h2>Body Care</h2>
-            <button class="shop-btn">Shop Now</button>
-          </div>
-          <div
-            class="carousel-slide"
-            style="background-image: url('face-care.jpg')"
-          >
-            <h2>Face Care</h2>
-            <button class="shop-btn">Shop Now</button>
-          </div>
-          <div
-            class="carousel-slide"
-            style="background-image: url('hair-care.jpg')"
-          >
-            <h2>Hair Care</h2>
-            <button class="shop-btn">Shop Now</button>
-          </div>
-        </div>
-        <button class="prev" onclick="moveSlide(-1)">❮</button>
-        <button class="next" onclick="moveSlide(1)">❯</button>
+      <div class="slider">
+        <div><img src="images/Img03.jpg" alt="Slide 1" /></div>
+        <div><img src="images/Img02.jpg" alt="Slide 2" /></div>
+        <div><img src="images/Img01.jpg" alt="Slide 3" /></div>
+      </div>
+      <div class="explore">
+        <h2 class="e-head">Explore our exclusive range of products</h2>
+        <a class="e-link">Shop Now</a>
       </div>
     </div>
+    <footer class="footer">
+      <nav class="navbar">
+        <div class="socialss">
+          <h2 class="follow">Follow Us</h2>
+          <ul class="social-link">
+            <li>
+              <a class="footer-link" href="#">
+                <ion-icon class="social-icon" name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a class="footer-link" href="#">
+                <ion-icon class="social-icon" name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a class="footer-link" href="#">
+                <ion-icon class="social-icon" name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="#" class="dropdown-toggle">Company</a>
+            <ul class="dropdown">
+              <li><a href="about.html">About us</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="#" class="dropdown-toggle">Help</a>
+            <ul class="dropdown">
+              <li><a href="faq.html">FAQ</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="#" class="dropdown-toggle">Newsroom </a>
+            <ul class="dropdown">
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="last">
+          <p class="copyright">
+            Copyright &copy; <span class="year">2027</span> by Builders Inc. All
+            rights reserved. | designed by
+            <a
+              class="signature"
+              href="https://my-portfolio-ten-tau-61.vercel.app/"
+              target="_blank"
+              >Mayomiwa</a
+            >
+          </p>
+        </div>
+      </nav>
+    </footer>
     <script defer src="script.js"></script>
     <div class="box"></div>
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>

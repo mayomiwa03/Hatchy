@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "animejs": "^3.2.2"
+    "animejs": "^3.2.2",
+    "hover.css": "^2.3.2"
   }
 }

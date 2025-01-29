@@ -12,35 +12,6 @@ html {
   font-family: "Poppins", cursive;
 }
 
-#splash-screen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: #333;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: Arial, sans-serif;
-  z-index: 1000;
-}
-#splash-screen-texts {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 5rem;
-}
-#splash-screen h1 {
-  font-size: 6rem;
-}
-
-#splash-screen p {
-  font-size: 3rem;
-}
-
 .body {
   color: #333;
 }
@@ -72,7 +43,7 @@ html {
   text-decoration: none;
   font-size: 1.5rem;
   padding: 0.5rem 1rem;
-  border-radius: 200px;
+  border-radius: 7px;
   font-weight: 400;
   transition: all 0.3s ease;
 }
@@ -167,22 +138,25 @@ html {
 }
 .first-view {
   background-image: linear-gradient(
-      rgba(34, 34, 34, 0.6),
-      rgba(34, 34, 34, 0.6)
+      rgba(34, 34, 34, 0.623),
+      rgba(34, 34, 34, 0.096)
     ),
     url("../images/desktop-b-img.jpg");
   background-size: cover;
   background-position: center;
-  height: 70vh;
+  height: 40vh;
 }
 .hero {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 10rem;
+  margin: 6rem auto;
   text-align: center;
-  color: #eee;
+  color: #333;
   gap: 4rem;
+}
+#animatedText {
+  z-index: 2;
 }
 .h-head {
   font-size: 3.5rem;
@@ -193,6 +167,16 @@ html {
   max-width: 60rem;
   font-weight: 400;
 }
+/* .h-link:link,
+.h-link:visited {
+  text-decoration: none;
+  color: #eee;
+  background-color: #ff914d;
+  padding: 1rem 3rem;
+  font-weight: 500;
+  border-radius: 7px;
+  font-size: 1.8rem;
+} */
 /* Typing effect
 .typing-effect {
   display: inline-block;
@@ -218,63 +202,172 @@ html {
     border-color: transparent;
   }
 } */
+
+/* Services */
 /* carousel */
-.carousel {
-  position: relative;
-  width: 80%;
-  height: 400px;
-  overflow: hidden;
-  border-radius: 10px;
+.slider img {
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
 }
 
-.carousel-track {
-  display: flex;
-  width: 300%; /* 3 slides */
-  transition: transform 0.8s ease-in-out;
-}
-
-.carousel-slide {
-  min-width: 100%;
-  height: 400px;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 2rem;
-  font-weight: bold;
-  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-}
-
-.shop-btn {
-  padding: 10px 20px;
-  font-size: 1rem;
-  background-color: white;
-  color: black;
-  border: none;
-  cursor: pointer;
-  margin-top: 10px;
-}
-
-.prev,
-.next {
+/* Hide default Slick arrows */
+.slick-prev,
+.slick-next {
+  font-size: 0; /* Hide default text */
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  cursor: pointer;
-  padding: 10px;
-  font-size: 1.5rem;
+  width: 50px;
+  height: 50px;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
   border-radius: 50%;
 }
 
-.prev {
+/* Positioning */
+.slick-prev {
   left: 10px;
 }
-.next {
+.slick-next {
   right: 10px;
+}
+
+/* Custom Hover Effect */
+.slick-prev::before,
+.slick-next::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 24px;
+  color: white;
+}
+
+.slick-prev::before {
+  content: "\f104"; /* Left arrow */
+}
+
+.slick-next::before {
+  content: "\f105"; /* Right arrow */
+}
+.slick-prev,
+.slick-next {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.slick-slider:hover .slick-prev,
+.slick-slider:hover .slick-next {
+  opacity: 1;
+}
+
+/* Explore */
+.explore {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  margin: 4rem 0;
+  position: relative;
+}
+
+.e-link,
+.h-link {
+  font-size: 1.7rem;
+  font-weight: 500;
+  border: 2px solid #ff914d;
+  border-radius: 7px;
+  background: transparent;
+  text-decoration: none;
+  color: #ff914d;
+  position: relative;
+  padding: 1rem 3rem;
+  overflow: hidden;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.e-link,
+.h-link:hover {
+  border: 3px solid #ff914d;
+  color: #000;
+  font-weight: 600;
+}
+.e-link::before,
+.h-link::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: -30px;
+  width: 0;
+  height: 100%;
+  background-color: #ff914d;
+  transform: skewX(35deg);
+  z-index: -1;
+  transition: width 0.5s;
+}
+.e-link:hover::before,
+.h-link:hover::before {
+  width: 130%;
+}
+/* footer */
+.footer {
+}
+.navbar {
+  margin: 0;
+  background-color: #333;
+  padding: 2rem 20rem 15rem 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: relative;
+}
+.nav-item a {
+  color: #fff;
+  padding: 10px;
+  display: block;
+}
+.dropdown {
+  list-style: none;
+}
+.dropdown a {
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+.dropdown-toggle {
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.social-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+.social-icon {
+  font-size: 2rem;
+  color: #fff;
+}
+.follow {
+  font-size: 1.6rem;
+  color: #fff;
+  padding-bottom: 1rem;
+}
+.last {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 4rem;
+}
+
+.copyright {
+  color: #fff;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.signature {
+  color: #fff;
+  text-decoration: none;
 }

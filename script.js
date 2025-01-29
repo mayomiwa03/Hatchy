@@ -49,21 +49,34 @@ function animateText() {
 animateText(); // Start animation
 
 // CAROUSEL
-let index = 0;
-const slides = document.querySelectorAll(".carousel-slide");
-const track = document.querySelector(".carousel-track");
-const totalSlides = slides.length;
+$(document).ready(function () {
+  $(".slider").slick({
+    autoplay: true,
+    autoplaySpeed: 3000,
+    dots: false,
+    arrows: true,
+  });
+});
+// Explore button
+// Example JS to change text on click (if needed)
+document.getElementById("e-link").addEventListener("click", function () {
+  this.textContent = "You Clicked Me!";
+  setTimeout(() => {
+    this.textContent = "Hover Over Me";
+  }, 2000);
+});
+// footer dropdown
+document.querySelectorAll(".dropdown-toggle").forEach((toggle) => {
+  toggle.addEventListener("click", (e) => {
+    e.preventDefault(); // Prevent the link from navigating
 
-function moveSlide(step) {
-  index = (index + step + totalSlides) % totalSlides;
-  updateSlide();
-}
+    const dropdown = toggle.nextElementSibling;
 
-function updateSlide() {
-  track.style.transform = `translateX(-${index * 100}%)`;
-}
-
-// Auto-slide every 3 seconds
-setInterval(() => {
-  moveSlide(1);
-}, 3000);
+    // Toggle the dropdown's visibility
+    if (dropdown.style.maxHeight) {
+      dropdown.style.maxHeight = null; // Collapse dropdown
+    } else {
+      dropdown.style.maxHeight = dropdown.scrollHeight + "px"; // Expand dropdown
+    }
+  });
+});
