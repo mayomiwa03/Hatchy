@@ -60,6 +60,7 @@
     transition: all 0.05 ease;
   }
   .nav-menu a {
+    font-size: 2rem;
     color: #000;
     font-weight: 600;
   }
